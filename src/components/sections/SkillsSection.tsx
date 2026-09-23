@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
 const skillCategories = [
@@ -94,7 +94,7 @@ export default function SkillsSection() {
             </h3>
             
             <div className="space-y-6">
-              {Object.entries(currentStack).map(([layer, techs], idx) => {
+              {Object.entries(currentStack).map(([layer, techs]) => {
                 const isActive = hoveredCategory === null || 
                   (hoveredCategory === 'languages' && layer === 'frontend') ||
                   (hoveredCategory === 'frameworks' && (layer === 'frontend' || layer === 'backend' || layer === 'ai')) ||
